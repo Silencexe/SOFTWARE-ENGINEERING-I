@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login - We Care</title>
+<style>
+    body { font-family: Arial, sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; background-color: #f4f4f9; }
+    .container { display: flex; flex-direction: column; align-items: center; width: 300px; }
+    .header-box { border: 2px solid #000; padding: 20px; margin-bottom: 30px; font-size: 28px; width: 100%; text-align: center; box-sizing: border-box; }
+    input { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #000; box-sizing: border-box; }
+    button { width: 100%; padding: 12px; background: #000; color: #fff; border: none; cursor: pointer; font-size: 16px; }
+    .links { margin-top: 50px; text-align: center; line-height: 2; }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header-box">We Care</div>
+    <input type="text" id="username" placeholder="username">
+    <input type="password" id="password" placeholder="password">
+    <button onclick="checkLogin()">Login</button>
+
+    <div class="links">
+    <div>create account</div>
+    <div>forgot password</div>
+    </div>
+</div>
+
+<script>
+    function checkLogin() {
+    const user = document.getElementById('username').value;
+    const pass = document.getElementById('password').value;
+
+    if (user === "john" && pass === "doe") {
+    window.location.href = "home.html";
+    } else {
+    alert("Invalid credentials. Try john / doe");
+    }
+}
+</script>
+
+</body>
+</html>
